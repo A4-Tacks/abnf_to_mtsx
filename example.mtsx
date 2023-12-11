@@ -5,7 +5,7 @@
     colors: [
         //!COLOR
     ],
-    
+
     defines: [
         //!BEGIN
         ;; This is a example abnf rulelist
@@ -14,7 +14,7 @@
         foo = %s"foo"
         bar = </bar/>  ; use regex syntax
 
-       //!COLORDEF baz=#(#ff0000, #00ff00)
+        //!COLORDEF baz=#(#ff0000, #00ff00)
         baz = bar 1*foo bar
 
         //!COLORDEF test="meta"
