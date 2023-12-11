@@ -15,3 +15,7 @@ that inserts the abnf format into the mtsx syntax file for easy writing."""
 
 [dependencies]
 abnf = "0.13.0"
+
+[profile.release]
+strip = true
+lto = true
