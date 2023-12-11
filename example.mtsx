@@ -1,0 +1,44 @@
+{
+    name: ["TEST", ".test"],
+    hide: false,
+
+    colors: [
+        //!COLOR
+    ],
+    
+    defines: [
+        //!BEGIN
+        ;; This is a example abnf rulelist
+
+        //!COLORDEF foo="number"
+        foo = %s"foo"
+        bar = </bar/>  ; use regex syntax
+
+       //!COLORDEF baz=#(#ff0000, #00ff00)
+        baz = bar 1*foo bar
+
+        //!COLORDEF test="meta"
+        test = %s"test"  ; use `%s` case-sensitive
+
+        ;; example text
+        ;; ```
+        ;; barfoobar
+        ;; barfoofoobar
+        ;; barfoofoofoobar
+        ;; test
+        ;; ```
+        ;; highlight failed
+        ;; ```
+        ;; barbar
+        ;; foo
+        ;; ```
+
+        //!END
+        //!CODE
+    ]
+
+    contains: [
+        {include: "baz"}
+        {include: "test"}
+    ]
+}

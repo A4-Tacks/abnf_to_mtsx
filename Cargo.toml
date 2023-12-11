@@ -1,0 +1,17 @@
+[package]
+name = "abnf_to_mtsx"
+version = "0.1.0"
+edition = "2021"
+authors = ['A4-Tacks <wdsjxhno1001@163.com>']
+license = "GPL-3.0"
+repository = "https://github.com/A4-Tacks/abnf_to_mtsx"
+homepage = "https://github.com/A4-Tacks/abnf_to_mtsx"
+categories = ["command-line-utilities"]
+description = """
+This is a conversion software,
+that inserts the abnf format into the mtsx syntax file for easy writing."""
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+abnf = "0.13.0"
