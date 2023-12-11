@@ -15,5 +15,16 @@ Due to the fact that using a large number of redundant matchers for failure
 deduction is not the main style highlighted in the [MT-Manager] editor,
 and there are performance issues, attention should be paid when using it.
 
+## How To Use?
+### Install
+```shell
+cargo install --path .
+```
+### Use
+```shell
+abnf_to_mtsx x # input any args print help
+abnf_to_mtsx < example.mtsx
+```
+
 [MT-Manager]: https://mt2.cn
 [example.mtsx]: ./example.mtsx
