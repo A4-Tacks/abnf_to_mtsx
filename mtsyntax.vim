@@ -29,9 +29,9 @@ syn region mtsyntaxRegex start="/" end="/\|$" contains=mtsyntaxRegexEscape,mtsyn
 syn match mtsyntaxRegexOtherEscape "\\." contained
 syn match mtsyntaxRegexEscape "\\/" contained
 if has('conceal')
-    syn region mtsyntaxRegexCompactInclude matchgroup=mtsyntaxRegexCompactIncludeGroup start=.\%(/\|)\@<=\)+include(". end=.")\%(+/\|\%(+include\)\@=\). oneline contained concealends cchar=/
+    syn region mtsyntaxRegexCompactInclude matchgroup=mtsyntaxRegexCompactIncludeGroup start=.\%(/\|)\@<=\)+include(". end=.")\%(+/\|\%(\%(+include("[^"]\+")\)\++/\)\@=\). oneline contained concealends cchar=/
 else
-    syn region mtsyntaxRegexCompactInclude matchgroup=mtsyntaxRegexCompactIncludeGroup start=.\%(/\|)\@<=\)+include(". end=.")\%(+/\|\%(+include\)\@=\). oneline contained
+    syn region mtsyntaxRegexCompactInclude matchgroup=mtsyntaxRegexCompactIncludeGroup start=.\%(/\|)\@<=\)+include(". end=.")\%(+/\|\%(\%(+include("[^"]\+")\)\++/\)\@=\). oneline contained
 endif
 hi def link mtsyntaxRegex String
 hi def link mtsyntaxRegexOtherEscape mtsyntaxRegex
