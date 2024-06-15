@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:		MT-Syntax (mtsx)
 " Maintainer:		A4-Tacks <wdsjxhno1001@163.com>
-" Last Change:		2023-12-13
-" URL:		https://github.com/A4-Tacks/abnf_to_mtsx
+" Last Change:		2024-06-15
+" URL:			https://github.com/A4-Tacks/abnf_to_mtsx
 
 if exists("b:current_syntax")
     finish
@@ -16,6 +16,7 @@ syn case match
 
 setlocal comments=://
 setlocal commentstring=//%s
+setlocal iskeyword+=-
 
 
 syn region mtsyntaxString start=/"/ end=/"\|$/ contains=mtsyntaxStrEscape,mtsyntaxStrFailEscape
@@ -90,3 +91,5 @@ hi def link mtsyntaxABNFProse String
 hi def link mtsyntaxABNFComment Comment
 hi def link mtsyntaxABNFNumVal Number
 hi def link mtsyntaxABNFRepeat Number
+
+" vim:ts=8 sts=8 noet nowrap
