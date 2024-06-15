@@ -27,7 +27,7 @@ hi def link mtsyntaxStrEscape SpecialChar
 hi def link mtsyntaxStrFailEscape Error
 
 syn region mtsyntaxRegex start="/" end="/\|$" contains=mtsyntaxRegexEscape,mtsyntaxRegexOtherEscape,mtsyntaxRegexCompactInclude oneline
-syn match mtsyntaxRegexOtherEscape "\\." contained
+syn match mtsyntaxRegexOtherEscape "\\\%(\\/\)\@!." contained
 syn match mtsyntaxRegexEscape "\\/" contained
 if has('conceal')
     syn region mtsyntaxRegexCompactInclude matchgroup=mtsyntaxRegexCompactIncludeGroup start=.\%(/\|)\@<=\)+include(". end=.")\%(+/\|\%(\%(+include("[^"]\+")\)\++/\)\@=\). oneline contained concealends cchar=/
