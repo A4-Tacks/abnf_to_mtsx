@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:		MT-Syntax (mtsx)
 " Maintainer:		A4-Tacks <wdsjxhno1001@163.com>
-" Last Change:		2024-06-15
+" Last Change:		2024-06-26
 " URL:			https://github.com/A4-Tacks/abnf_to_mtsx
 
 if exists("b:current_syntax")
@@ -17,6 +17,7 @@ syn case match
 setlocal comments=://
 setlocal commentstring=//%s
 setlocal iskeyword+=-
+setlocal foldmethod=syntax
 
 
 syn region mtsyntaxString start=/"/ end=/"\|$/ contains=mtsyntaxStrEscape,mtsyntaxStrFailEscape
