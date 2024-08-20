@@ -45,10 +45,12 @@ syn match mtsyntaxBuiltin /#[0-9A-Z_]\+#/
 syn match mtsyntaxColor /#\x\{3,8}\>/
 syn match mtsyntaxRegexGroup /\v<(0|[1-9]\d*)>/
 syn match mtsyntaxBoolean /\v<(true|false)>/
+syn match mtsyntaxMeta /\v\@<\K\k*>/
 hi def link mtsyntaxBuiltin Constant
 hi def link mtsyntaxColor Number
 hi def link mtsyntaxRegexGroup Number
 hi def link mtsyntaxBoolean Number
+hi def link mtsyntaxMeta Function
 
 syn match mtsyntaxGroup /\v<group>[ \t]*:?[ \t]*/ nextgroup=mtsyntaxGroupValue
 syn match mtsyntaxGroupValue /\v<(link(All)?|select)>/ contained
