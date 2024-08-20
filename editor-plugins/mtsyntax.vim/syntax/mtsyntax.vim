@@ -59,12 +59,11 @@ syn match mtsyntaxBuiltinFunction /\v<(keywordsToRegex)>/
 hi def link mtsyntaxBuiltinFunction Operator
 
 syn keyword mtsyntaxKeywords
-            \ match name comment insertSpace \contains color
-            \ colors start end startsWith endsWith builtin
-            \ matchEndFirst codeFormatter codeShrinker
-            \ lineBackground ignoreCase hide addToContains
-            \ number iSuffixes fSuffixes recordAllGroups
-            \ defines include
+            \ match name comment insertSpace \contains color colors start end startsWith endsWith builtin
+            \ matchEndFirst mustMatchEnd codeFormatter codeShrinker lineBackground ignoreCase hide
+            \ addToContains number iSuffixes fSuffixes recordAllGroups defines include endPriority
+            \ style styles childrenStyle bracketPairs
+
 hi def link mtsyntaxKeywords Keyword
 
 syn match mtsyntaxComment /\/\/.*/
