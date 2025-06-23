@@ -52,7 +52,7 @@ hi def link mtsyntaxRegexGroup Number
 hi def link mtsyntaxBoolean Number
 hi def link mtsyntaxMeta Function
 
-syn match mtsyntaxGroup /\v<group>[ \t]*:?[ \t]*/ nextgroup=mtsyntaxGroupValue
+syn match mtsyntaxGroup /\v<group>[ \t]*:/he=e-1 skipwhite nextgroup=mtsyntaxGroupValue
 syn match mtsyntaxGroupValue /\v<(link(All)?|select)>/ contained
 hi def link mtsyntaxGroup Keyword
 hi def link mtsyntaxGroupValue Number
