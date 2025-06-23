@@ -68,7 +68,10 @@ syn keyword mtsyntaxKeywords
 
 hi def link mtsyntaxKeywords Keyword
 
-syn match mtsyntaxComment /\/\/.*/
+syn keyword mtsyntaxTodo contained TODO FIXME NOTE Todo Note
+hi def link mtsyntaxTodo Todo
+
+syn match mtsyntaxComment /\/\/.*/ contains=mtsyntaxTodo
 hi def link mtsyntaxComment Comment
 
 syn region mtsyntaxBlock start=/{/ end=/}/ transparent fold
