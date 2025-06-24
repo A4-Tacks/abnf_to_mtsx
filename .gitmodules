@@ -1,0 +1,3 @@
+[submodule "editor-plugins/mtsyntax.vim"]
+	path = editor-plugins/mtsyntax.vim
+	url = https://github.com/A4-Tacks/mtsyntax.vim
